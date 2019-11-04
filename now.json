@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+	{ "src": "package.json", "use": "@now/static-build"},
+	{ "src": "./index.js", "use": "@now/node-server" },
+	{ "src": "./routes/index.js", "use": "@now/node-server" },
+	{ "src": "./app.js", "use": "@now/node-server" },
+   { "src": "./routes/*.js", "use": "@now/node-server" }
+    ],
+    "routes": [
+	{ "src": "/", "dest": "./routes/index.js" },
+	{ "src": "/login", "dest": "/" },
+   { "src": "/account", "dest": "/" },
+   { "src": "/advanced-search", "dest": "/" },
+   { "src": "/cart", "dest": "/" },
+   { "src": "/checkout", "dest": "/" },
+   { "src": "/forget-password", "dest": "/" },
+   { "src": "/history", "dest": "/" },
+   { "src": "/product-details", "dest": "/" },
+   { "src": "/shop", "dest": "/" }
+    ]
+}
